@@ -1,4 +1,4 @@
-#include <stdio.h> // Include standard input/output library
+#include <stdio.h>
 
 void bubble_sort(int A[], int n){
         
@@ -104,30 +104,47 @@ void quicksort(int A[], int lb, int ub){
 
 }
 
-int main() { 
-
-    int arr[9] = {34,524,1245,23,9,7,34,56,24}; // defining unsorted array
-    
-    int len = sizeof(arr) / sizeof(arr[0]);
-
-    // bubble_sort(arr, len);
-    // insertion_sort(arr, len);
-    // min(arr, len);
-    // selection_sort(arr, len);
-
-    quicksort(arr, 0, len-1);
-
-
-    printf("Sorted array: ");
-    for (int i = 0; i < len; i++) {
-        printf("%d ", arr[i]);
+void linear_search(int A[], int n, int key){
+    int found;
+    for(int i=0; i<n; i++){
+        found = 0;
+        if(A[i] == key){
+            printf("Key found at index: %d\n", i);
+            int found = 1;
+        }
     }
-    printf("\n");
-
-    return 0;
-
+    
+    if(found != 1){
+        printf("Key not found! \n");
+    }
 }
 
+void binary_search(int A[], int l, int n, int key){
+
+int lb, ub;
+quicksort(A, lb, ub);
+
+    while(l <= n){
+        int mid = (l+n)/2;
+
+        if(key == A[mid]){
+            printf("Key found at index: %d\n", mid+1);
+            return;
+        }
+
+        else if(key < A[mid]){
+            n = mid - 1;
+        }
+
+        else if(key > A[mid]){
+            l = mid + 1;
+        }
+
+    }
+    
+    printf("Key not found!");
+
+}
 
 
 
