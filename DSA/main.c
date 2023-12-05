@@ -1,5 +1,6 @@
 #include <stdio.h> // Include standard input/output library
 #include "searchingsorting.h"
+#include "linkedlist.h"
 
 int main() { 
 
@@ -12,15 +13,15 @@ int main() {
     // min(arr, len);
     // selection_sort(arr, len);
     // quicksort(arr, 0, len-1);
-
     // linear_search(arr, len, 2431);
     // binary_search(arr, 0, len-1, 24);
+    // printarray(arr, len);
 
-    printf("Sorted array: ");
-    for (int i = 0; i < len; i++) {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
+    // node *head = create();
+    // printf("%d\n", head->val);
+    // printLL(head);
+    // insert(head);
+    // printLL(head);
 
     return 0;
 

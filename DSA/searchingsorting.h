@@ -121,8 +121,8 @@ void linear_search(int A[], int n, int key){
 
 void binary_search(int A[], int l, int n, int key){
 
-int lb, ub;
-quicksort(A, lb, ub);
+    int lb, ub;
+    quicksort(A, lb, ub);
 
     while(l <= n){
         int mid = (l+n)/2;
@@ -140,11 +140,18 @@ quicksort(A, lb, ub);
             l = mid + 1;
         }
 
-    }
+    } 
     
     printf("Key not found!");
 
 }
 
+void printarray(int A[], int len){
 
+    printf("Sorted array: ");
+    for(int i=0; i<len; i++){
+        printf("%d ", A[i]);
+    }
+    printf("\n");
 
+}
