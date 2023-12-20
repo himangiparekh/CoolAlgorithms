@@ -18,18 +18,31 @@ void bubble_sort(int A[], int n){
 }
 
 void insertion_sort(int A[], int n){
-
-    for(int i=0; i<n-1; i++){
+    int i;
+    for(i = 0; i < n-1; i++){
         int j = i+1;
-        while (j>0 && (A[j] < A[j-1])){
-            
-            int temp = A[j];
+        int key = A[j];
+        while(j > 0 && key < A[j-1]){
             A[j] = A[j-1];
-            A[j-1] = temp;
             j--;
         }
+        A[j] = key;
     }
 }
+
+// void insertion_sort(int A[], int n){
+
+//     for(int i=0; i<n-1; i++){
+//         int j = i+1;
+//         while (j>0 && (A[j] < A[j-1])){
+            
+//             int temp = A[j];
+//             A[j] = A[j-1];
+//             A[j-1] = temp;
+//             j--;
+//         }
+//     }
+// }
 
 void min(int A[], int n){
     
@@ -142,16 +155,17 @@ void binary_search(int A[], int l, int n, int key){
 
     } 
     
-    printf("Key not found!");
+    printf("Key not found! \n");
 
 }
 
-void printarray(int A[], int len){
+int printarray(int A[], int len){
 
-    printf("Sorted array: ");
+    printf("Array: ");
     for(int i=0; i<len; i++){
         printf("%d ", A[i]);
     }
     printf("\n");
+    return 0;
 
 }
