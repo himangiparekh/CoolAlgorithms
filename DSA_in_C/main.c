@@ -4,7 +4,7 @@
 
 int main() { 
 
-    int arr[9] = {378, 914, 10101929, 21, 23432, 123, 2134, -5, 892}; // defining unsorted array
+    int arr[9] = {378, 914, 10101929, 21, 23432, 123, 2134, -5, 892}; // defining initial array
     
     int len = sizeof(arr) / sizeof(arr[0]);
 
